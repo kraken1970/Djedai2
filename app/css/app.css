@@ -1,0 +1,383 @@
+@import 'normalize.css/normalize.css';
+@import './libs/bootstrap-grid-3.3.1.min.css';
+@import './fonts.css';
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto\9;
+}
+/*ul, h1, h2, h3 {
+  margin: 0;
+}*/
+
+ $text-color: #333333;
+ $dark-color: #000000;
+ $red-color: #9b1818;
+ $blue-color: #003469;
+ $green-color: #67bc5c;
+
+body {
+  font-family: "RobotoRegular", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  min-width: 320px;
+  position: relative;
+  -webkit-font-smoothing: antialised;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: red;
+  border: 3px solid red;
+  border-radius: 3px;
+}
+
+body input:focus:required:valid,
+body textarea:focus:required:valid {
+  color: green;
+}
+
+.hidden {
+  display: none;
+}
+
+header h1 {
+  font-family: "CleanvertisingLight", sans-serif;
+  font-size: 58px;
+  font-weight: 300;
+  line-height: 56px;
+  color: #ffffff;
+}
+
+ header {
+   min-height: 641px;
+   background-image: url(../images/header-fon.jpg);
+   background-position: top center;
+   -webkit-background-size: cover;
+   background-size: cover;
+   color: #ffffff;
+   padding-top: 32px;
+   padding-bottom: 40px;
+ }
+
+ .logo {
+   font-family: "RobotoBold", sans-serif;
+   font-size: 40px;
+   line-height: 56px;
+ }
+/*TAB-вкладки верх*/
+.contact_phone {
+  text-align: right;
+}
+
+.contact_phone label {
+  cursor: pointer;
+  display: inline-block;
+  font-family: "RobotoRegular", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 45px;
+  transition: all 0.3s ease; 
+}
+
+.contact_phone input {
+  display: none;
+}
+
+.contact_phone input:checked + label {
+  text-decoration: underline;
+}
+
+.contact_phone input[id="tab-1"]:checked ~ .content .tab-1,
+.contact_phone input[id="tab-2"]:checked ~ .content .tab-2 {
+  display: block;
+}
+
+.contact_phone article {
+  width: 100%;
+  font-family: "RobotoBold", sans-serif;
+  font-size: 35px;
+  display: none;
+}
+
+.top_header h2{
+  font-family: "CleanvertisingLight", sans-serif;
+  font-size: 37px;
+  font-weight: 300;
+  margin-top: -25px;
+}
+/*TAB-вкладка скидки*/
+
+.discount label {
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Robotobold", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 62px;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 0px 20px;
+  margin-right: -4px;
+  transition: all 0.3s ease;
+}
+
+.discount input {
+  display: none;
+  margin-right: -4px;
+}
+
+.discount input:checked + label {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: $dark-color;
+}
+
+.discount input[id="found-discount"]:checked ~ .content_discount .found-discount,
+.discount input[id="add-discount"]:checked ~ .content_discount .add-discount {
+  display: block;
+}
+
+.discount article {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: "RobotoBold",sans-serif;
+  font-size: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  line-height: 25px;
+  & .my {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    color: #706a67; 
+  }
+}
+
+.found-discount ul,
+.add-discount ul {
+      padding: 25px 0 0 30px;
+ & li {
+  list-style-type: none;
+  padding-left: 40px;
+  position: relative;
+  padding-bottom: 10px;
+    & img {
+      position: absolute;
+      top: 8;
+      left: 0;
+    }
+  }
+}
+/*buttons*/
+.button {
+  font-family: "RobotoBold",sans-serif;
+  font-size: 16px;
+  line-height: 62px;
+  border-radius: 6px;
+  border: none;
+  outline: 0;
+  padding: 0 30px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  &.red {
+    float: right;
+    margin-bottom: 20px;
+    margin-right: 35px;
+    background-color:$red-color;
+    color: #ffffff;
+  }
+  &.green {
+    background-color:$green-color;
+    color: #ffffff;
+  }
+  &.white {
+    background-color: #ffffff;
+    color: $dark-color;
+  }
+}
+
+.s_tizers {
+  position: relative;
+  min-width: 320px;
+  background-color: #003469;
+  background-image: linear-gradient(to top, #e8eff7 0%, #c6d8ee 100%);
+  color: $blue-color;
+  font-family: "CleanvertisingLight", sans-serif;
+  text-transform: uppercase;
+  padding: 40px 0;
+& span {
+    display: block;
+    letter-spacing: -1px;
+    font-size: 19px;
+    line-height: 36px;
+    &.book {
+      font-size: 14px;
+    }
+    &.ielts {
+      font-size: 13px;
+    }
+  }
+  & strong {
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    display: block;
+    letter-spacing: -1px;
+    &.ielts2 {
+      font-size: 22px;
+    }
+  }
+}
+
+.tiz_img .my {
+  font-size: 75px;
+  position: absolute;
+  top: 75px
+}
+
+.origin_font {
+  font-family: "RobotoRegular", sans-serif;
+  font-size: 75px;
+  line-height: 56px;
+  letter-spacing: -15px;
+}
+
+.first_tiz {
+  vertical-align: baseline;
+  line-height: 30px;
+}
+
+.s_tizers .col-md-2 {
+  padding: 0;
+}
+
+.s_profi {
+  padding: 64px 0 75px 0;
+  & h2 {
+    color: $blue-color;
+    font-family: "CleanvertisingLight", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 56px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  & h3 {
+    font-family:"RobotoRegular", sans-serif;
+    color: #9b1818;
+    font-size: 30px;
+    line-height: 28px;
+    
+  }
+  font-family:"RobotoRegular", sans-serif;
+  font-size: 16px;
+  color:$text-color;
+  line-height: 24px;
+  
+  & strong {
+    font-family: "RobotoBold", sans-serif;
+    font-size: 17px;
+  } 
+}
+
+i.profi_left {
+  font-size: 116px;
+  position: relative;
+  top: 152px;
+  color: $red-color;
+  float: left;
+}
+
+.profi_right {
+  float: left;
+  margin-left: 143px;
+}
+
+.profi_right h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.profi_contact_form {
+  border: 5px solid $green-color;
+  border-radius: 6px;
+  padding: 25px;
+}
+
+h2.contact_form {
+  color: #444444;
+  font-family: "RobotoBold", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.profi_contact_form input,
+.profi_contact_form select {
+  width: 100%;
+  outline: 0;
+  cursor: pointer;
+  height: 43px;
+  padding-left: 10px;
+  &:focus {
+   border: 3px solid $green-color;
+   border-radius: 3px;
+  }
+}
+
+/*.form_send input[type="text"] {
+  border: 3px solid $green-color;
+  border-radius: 3px;
+}*/
+
+.form_send label {
+  font-family: "RobotoRegular", sans-serif;
+  font-size: 14px;
+  color: #666666;
+  & input,
+  & select {
+    font-size: 20px;
+  }
+}
+
+.form_send {
+  margin-bottom: 15px;
+  &.bgreen  {
+  text-align: center;
+  margin-top: 40px;
+ }
+}
+
+.s_review {
+  background-image: url(../images/dark-fon.jpg);
+  /*background-repeat: repeat-x;
+  background-attachment: fixed;*/
+  min-height: 641px;
+  background-position: top center;
+  -webkit-background-size: cover;
+   background-size: cover;
+   padding: 55px 0 65px 0;
+  color: #ffffff;
+  & h2 {
+    font-family: "CleanvertisingLight", sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 56px;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+

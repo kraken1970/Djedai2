@@ -1,0 +1,125 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .s_tizers .row > .col-md-1 {
+  margin-bottom: 70px;
+  text-align: center;
+}
+.s_tizers .row > div {
+  text-align: center;
+}
+.origin_font {
+  margin-bottom: -60px;
+  margin-left: 50px;
+}
+.tiz_descr {
+  display: block;
+  margin-top: 70px;
+}
+.tiz_img {
+  display: block;
+  margin-left: 50px;
+}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .top_phone, .logo, h1, .top_header h2 {
+    text-align: center;
+  }
+  .logo {
+    margin-bottom: 15px;
+  }
+  .wrapper article {
+    font-size: 30px;
+  }
+  .discount label {
+    font-size: 10px;
+    padding: 0 5px;
+  }
+  .discount article {
+    font-size: 12px;
+  }
+.col-md-3 {
+    display: block;
+    padding-bottom: 20px;
+  }
+  .tiz_img {
+    display: block;
+    margin-left: -40px;
+}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .top_header h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .top_header h2 {
+    font-size: 28px;
+  }
+  .button.red {
+    clear: both;
+  }
+  section h2 {
+    font-size: 36px;
+  }
+  .s_profi h2 {
+    font-size: 33px;
+  }
+  .profi_right {
+    clear: both;
+    margin-left: 0px;
+    margin-top: 100px;
+  }
+  .profi_block:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+@media (min-height : 720px) and (min-width : 1400px) {
+  header {
+    padding-bottom: 10px ;
+  }
+}
